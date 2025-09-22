@@ -267,15 +267,20 @@ header {
     background-attachment: scroll;
     background-image: url(../img/header-bg.png);
     background-position: center center;
-    background-repeat: none;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-background-size: auto;
+    -moz-background-size:  auto;
+    background-size:  auto;
+    -o-background-size:  auto;
 }
+@media (min-width: 2480px) { /* Adjust this breakpoint based on your image's intrinsic width or desired minimum size */
+            header {
+                background-size: cover; /* Scale up when container is larger */
+            }
+        }
 
 header .intro-text {
-    padding-top: 180px;
+    padding-top: 700px;
     padding-bottom: 250px;
 }
 
@@ -300,7 +305,7 @@ header .intro-text .intro-heading {
 
 @media(min-width:768px) {
     header .intro-text {
-        padding-top: 300px;
+        padding-top: 700px;
         padding-bottom: 400px;
     }
 
